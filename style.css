@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Garante que o body ocupe toda a altura da janela */
+    background-image: url(''); /* Insira o caminho da sua imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Efeito de paralaxe */
+    color: #1d0a0a; /* Cor do texto */
+}
+
+header {
+    background: rgb(255, 7, 7); /* Fundo semi-transparente */
+    color:	#463b3b;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+main {
+    background-color: #ff7802;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
+    flex: 1; /* Permite que o main ocupe o espaço restante */
+}
+
+.menu, .order {
+    background: rgba(227, 5, 5, 0.143);
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    flex: 1;
+    min-width: 300px; /* Define uma largura mínima para os itens */
+}
+
+.invoice {
+    text-align: center; /* Centraliza o texto dentro do aside */
+    background: rgba(243, 243, 241, 0.302); /* Fundo do cupom */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 20px; /* Margem externa para espaçamento */
+}
+ aside.invoice{
+    color: #060606;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+footer {
+    text-align: center; /* Centraliza o conteúdo do footer */
+    background-color:  rgb(253, 88, 0);
+}
+
+.social-icons {
+    display: inline-block; /* Permite que o container dos ícones seja centralizado */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    text-decoration: none; /* Remove o sublinhado */
+    color: #f7ff0c; /* Cor do texto */
+    font-size: 24px; /* Aumenta o tamanho dos ícones */
+    transition: color 0.3s; /* Transição suave para a mudança de cor */
+}
+
+.social-icons a:hover {
+    color: #13871e; /* Cor ao passar o mouse (exemplo: verde) */
+}
+
+.social-icons a i {
+    font-size: inherit; /* Faz com que o ícone herde o tamanho do link */
+}
+
+p {
+    color: rgb(0, 0, 0);
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px; /* Remove o padding */
+    height: 10px;
+}
+span#totalPrice{
+    color: #141715;
+}
+
+h1{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-transform: lowercase;
+text-transform: uppercase;
+text-decoration: overline;
+}
+
+
+h2 {
+    color: #d8d8d8; 
+    justify-content: center;
+    padding: 0%;
+    align-items: center;
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"] {
+    width: 100%; /* Faz com que o campo ocupe toda a largura disponível */
+    padding: 7px; /* Adiciona um pouco de espaço interno */
+    margin: 5px 0; /* Adiciona espaço acima e abaixo do campo */
+    border: 3px solid #cccccc90; /* Borda leve */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+/* Estilo para o botão */
+button {
+    padding: 3px 2px; /* Espaçamento interno do botão */
+    background-color: #15f537fe; /* Cor de fundo verde */
+    color: rgb(3, 3, 3); /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 12px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+button:hover {
+    background-color: #0be83b; /* Cor do botão ao passar o mouse */
+}
+
+ul .li{
+text-decoration: dashed;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+
+.order {
+
+    color: #000000;
+    padding: 10px 8px;
+
+}
+
+#qrcode {
+    margin-top: 20px;
+}
+#pixLink {
+    margin-top: 10px;
+    display: none; /* Inicialmente escondido */
+}

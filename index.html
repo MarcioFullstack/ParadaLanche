@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parada do Lanche</title>
+    <meta name="description" content="Parada do Lanche - Deliciosos hamburgueres e salgados. Faça seu pedido online e receba em casa.">
+    <meta name="keywords" content="hamburguer, salgados, delivery, Parada do Lanche, comida, sobremesa, Pudim">
+    <meta name="author" content="Seu Nome ou Nome da Empresa">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo da Marmitaria Delícias" class="logo">
+        <h1>Parada do Lanche</h1>
+    </header>
+
+    <main>
+        <section class="menu">
+            <h2>Cardápio Hamburgueres e Salgados</h2>
+            <ul>
+                <li>
+                    <h3>Salgado (Misto) - R$ 5,00</h3>
+                    <button onclick="addToOrder('Salgado Misto', 5)">Adicionar ao Pedido</button>
+                </li>
+                <li>
+                    <h3>Hamburguer - R$ 12,00 (Simples)</h3>
+                    <h4>(Queijo + Carne Hamburguer + Presunto + queijo + Alface + Tomate)</h4>
+                    <button onclick="addToOrder('Hamburguer Simples', 12)">Adicionar ao Pedido</button>
+                </li>
+
+                <li>
+                    <h3>Hamburguer - R$ 15,00 (Bauru)</h3>
+                    <h4>(Queijo + Carne Hamburguer + Presunto + Ovos+ queijo + Alface + Tomate)</h4>
+                    <button onclick="addToOrder('Hamburguer Bauru ', 15)">Adicionar ao Pedido</button>
+                </li>
+          
+                <li>
+                    <h3>Salgados carne - R$ 15,00</h3>
+                    <button onclick="addToOrder('Macarrão à Bolonhesa', 15)">Adicionar ao Pedido</button>
+                </li>
+                <li>
+                    <h3>Sobremesa: Pudim - R$ 6,00</h3>
+                    <button onclick="addToOrder('Pudim', 6)">Adicionar ao Pedido</button>
+                </li>
+            </ul>
+        </section>
+
+        <section class="order">
+            <h2>Meus Pedidos</h2>
+            <ul id="orderList"></ul>
+            <button onclick="clearOrder()">Limpar Pedido</button>
+        </section>
+
+        <aside class="invoice">
+            <h2>CUPOM</h2>
+            <h4>NÃO CUPOM FISCAL</h4>
+            <ul id="invoiceList">
+                 <li>Item 1 - R$ 5,00</li>
+            <li>Item 2 - R$ 5,00</li>
+            </ul>
+            <p>Total: <span id="totalPrice">R$ 0,00</span></p>
+            <input type="text" id="clientName" placeholder="Nome do Cliente" />
+            <input type="text" id="clientAddress" placeholder="Endereço de Entrega" /> <!-- Campo de endereço logo abaixo do nome -->
+           
+           
+            </select>
+            <button id="sendOrder" onclick="sendOrder()">Enviar Pedido</button>     
+            <div id="qrcode"></div>
+
+            <!-- Link para o pagamento via Pix -->
+            <div id="pixLink">
+                <p>Link para pagamento:</p>
+                <a id="pixPaymentLink" href="#" target="_blank">Pagar com Pix</a>
+                <button id="finalizeOrder" onclick="finalizeOrder()">Finalizar Pedido</button>
+            </div>
+
+           
+            </aside>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://wa.me/5585998222118" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+            <a href="https://www.instagram.com/paradadolanche_2023/profilecard/?igsh=MXd2bXVlZzVwdThscg==" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>    
+            <a href="https://www.facebook.com/your-page" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+        <p>&copy; 2023 Parada do Lanche. Todos os direitos reservados.</p>
+    </footer>
+
+    
+  
+    
+    <script src="script.js"></script>
